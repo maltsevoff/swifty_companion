@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
 	func authUsingIntra () {
 		let myData = MyData.init()
-		let reqUrl = myData.site +  "oauth/authorize?client_id=\(myData.uid)&redirect_uri=\(myData.redirectUrl)&response_type=code"
+		let reqUrl = myData.site +  "oauth/token?grant_type=client_credentials&client_id=\(myData.uid)&client_secret=\(myData.secretKey)"
 //		let reqUrl = "https://api.intra.42.fr/oauth/authorize?client_id=\(myData.uid)&redirect_uri=\(myData.redirectUrl)&response_type=code"
 		print(myData.uid, myData.redirectUrl, myData.secretKey)
 		
@@ -32,10 +32,16 @@ class ViewController: UIViewController {
 //					print("Error tut")
 //				}
 		
-		request(reqUrl, method: .get).authenticate(user: myData.uid, password: myData.secretKey)
+		request(reqUrl, method: .post).authenticate(user: myData.uid, password: myData.secretKey)
 			.responseString { response in
 				print(response)
+				response
 		}
+		
+//		request(reqUrl, method: .get)
+//			.responseString { response in
+//				print(response)
+//		}
 	}
 	
 }
