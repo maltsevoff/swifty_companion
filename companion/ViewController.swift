@@ -21,27 +21,22 @@ class ViewController: UIViewController {
 	func authUsingIntra () {
 		let myData = MyData.init()
 		let reqUrl = myData.site +  "oauth/token?grant_type=client_credentials&client_id=\(myData.uid)&client_secret=\(myData.secretKey)"
-//		let reqUrl = "https://api.intra.42.fr/oauth/authorize?client_id=\(myData.uid)&redirect_uri=\(myData.redirectUrl)&response_type=code"
-		print(myData.uid, myData.redirectUrl, myData.secretKey)
-		
-//		request(reqUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
-//			.validate().responseJSON { response in
-//				if response.result.value != nil {
-//					print(response)
-//				} else {
-//					print("Error tut")
-//				}
 		
 		request(reqUrl, method: .post).authenticate(user: myData.uid, password: myData.secretKey)
-			.responseString { response in
-				print(response)
-				response
+			.responseJSON { response in
+				if response.data != nil {
+					do {
+						let dict = try JSONSerialization.jsonObject(with: response.data!, options: []) as! [String: Any]
+						guard let token = dict["access_token"] as? String else { return }
+						print(token)
+					} catch (let error) {
+						print(error.localizedDescription)
+				}
+				} else {
+					print("Error in response")
+				}
 		}
 		
-//		request(reqUrl, method: .get)
-//			.responseString { response in
-//				print(response)
-//		}
 	}
 	
 }
