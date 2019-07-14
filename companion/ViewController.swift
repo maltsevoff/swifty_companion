@@ -11,11 +11,21 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+	@IBAction func searchButton(_ sender: UIButton) {
+		if userNameField.text != "" {
+			userLogin = userNameField.text!
+			performSegue(withIdentifier: "nextView", sender: nil)
+		} else {
+			let alert = UIAlertController(title: "Error", message: "Fill login field.", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+			self.present(alert, animated: true)
+		}
+	}
+	
+	@IBOutlet weak var userNameField: UITextField!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		authUsingIntra()
-		// Do any additional setup after loading the view.
-		
 	}
 
 	func authUsingIntra () {
@@ -28,6 +38,7 @@ class ViewController: UIViewController {
 					do {
 						let dict = try JSONSerialization.jsonObject(with: response.data!, options: []) as! [String: Any]
 						guard let token = dict["access_token"] as? String else { return }
+						bearerToken = token
 						print(token)
 					} catch (let error) {
 						print(error.localizedDescription)

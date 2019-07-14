@@ -13,5 +13,7 @@ struct MyData {
 	let secretKey = "b1595e069ffb6842c092f0e7befb654611d82b640e9ff97878c04b8e5d3e7522"
 	let redirectUrl = "CompanionApp%3A%2F%2FCompanionApp"
 	let site = "https://api.intra.42.fr/"
-	var token: String = ""
 }
+
+var bearerToken: String = ""
+var userLogin: String = ""
