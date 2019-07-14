@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="oLn-WJ-tTF">
             <objects>
-                <viewController id="OFA-Nb-Qbq" sceneMemberID="viewController">
+                <viewController id="OFA-Nb-Qbq" customClass="SecondViewController" customModule="companion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1NA-UD-DiY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
