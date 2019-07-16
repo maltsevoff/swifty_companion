@@ -16,7 +16,10 @@ class SecondViewController: UIViewController {
 		userInfo()
 		
     }
-    
+	
+	
+	var userID: String?
+	
 	func userInfo () {
 		let mydata = MyData.init()
 		let reqUrl = mydata.site + "v2/users/\(userLogin)"
@@ -29,8 +32,11 @@ class SecondViewController: UIViewController {
 			print(response)
 			do {
 				let dict = try JSONSerialization.jsonObject(with: response.data!, options: []) as! [String:Any]
-				guard let userID = dict["campus_users"] as? String else { return }
-				print("User id", userID)
+				guard let image = dict["image_url"] as? String else { return }
+				guard let fullname = dict["displayname"] as? String else { return }
+				guard let email = dict["email"] as? String else { return }
+				self.userID = dict["id"] as? String
+				print("User id", self.userID)
 			} catch {
 				print("Error")
 			}

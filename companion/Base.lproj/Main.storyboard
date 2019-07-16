@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" id="0cB-tu-5m3"/>
                     <connections>
                         <outlet property="userNameField" destination="CGh-y3-EIW" id="P3v-UF-59a"/>
-                        <segue destination="OFA-Nb-Qbq" kind="show" identifier="nextView" id="PLs-MK-PQ5"/>
+                        <segue destination="T0i-Bg-b7P" kind="show" id="Pb8-5J-Tp6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -48,19 +48,19 @@
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
         <!--Second View Controller-->
-        <scene sceneID="oLn-WJ-tTF">
+        <scene sceneID="ky8-Tr-dNh">
             <objects>
-                <viewController id="OFA-Nb-Qbq" customClass="SecondViewController" customModule="companion" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1NA-UD-DiY">
+                <viewController id="T0i-Bg-b7P" customClass="SecondViewController" customModule="companion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8aQ-26-Ey0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="FKa-7O-lyz"/>
+                        <viewLayoutGuide key="safeArea" id="vgR-H0-VMz"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d1e-bz-LbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnr-zS-QTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="118"/>
+            <point key="canvasLocation" x="1986.9565217391305" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cdw-vz-2mh">
