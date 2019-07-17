@@ -62,6 +62,10 @@ class ViewController: UIViewController {
             response in
             if response.result.isSuccess {
                 self.response = JSON(response.value!)
+                if self.response!.isEmpty {
+                    self.alertManger(title: "Error", subtitle: "Invalid login. Try again.")
+                    return
+                }
                 print(self.response!["displayname"])
                 self.performSegue(withIdentifier: "nextView", sender: nil)
             } else {

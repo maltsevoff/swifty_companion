@@ -17,3 +17,17 @@ struct MyData {
 
 var bearerToken: String = ""
 var userLogin: String = ""
+
+struct Skill {
+    var name: String?
+    var level: Double?
+}
+
+struct Project {
+    var name: String?
+    var mark: Int?
+    var isValidate: Bool?
+}
+
+var userSkills: [Skill] = []
+var userProjects: [Project] = []
