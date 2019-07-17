@@ -8,5 +8,5 @@ target 'companion' do
   # Pods for companion
 
 pod 'Alamofire'
-
+pod 'SwiftyJSON'
 end

@@ -8,40 +8,17 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		userInfo()
 		
     }
 	
-	
-	var userID: String?
-	
-	func userInfo () {
-		let mydata = MyData.init()
-		let reqUrl = mydata.site + "v2/users/\(userLogin)"
-		let headers = [
-			"Authorization": "Bearer " + bearerToken
-		]
-		
-		request(reqUrl, method: .get, headers: headers).responseJSON {
-			response in
-			print(response)
-			do {
-				let dict = try JSONSerialization.jsonObject(with: response.data!, options: []) as! [String:Any]
-				guard let image = dict["image_url"] as? String else { return }
-				guard let fullname = dict["displayname"] as? String else { return }
-				guard let email = dict["email"] as? String else { return }
-				self.userID = dict["id"] as? String
-				print("User id", self.userID)
-			} catch {
-				print("Error")
-			}
-		}
-	}
+    var userData: JSON?
+    
     /*
     // MARK: - Navigation
 
