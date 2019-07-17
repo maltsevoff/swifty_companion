@@ -14,19 +14,20 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		showUserInfo()
     }
-	
+    
+    @IBOutlet weak var personalPhoto: UIImageView!
+    
     var userData: JSON?
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showUserInfo() {
+        let imageUrl = URL(string: userData!["image_url"].string!)
+        if let photoData = try? Data(contentsOf: imageUrl!) {
+            personalPhoto.image = UIImage(data: photoData)
+        } else {
+            print("Bad access to intra server.")
+        }
     }
-    */
 
 }

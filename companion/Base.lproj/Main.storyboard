@@ -60,9 +60,25 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-GA-2I9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2350"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke9-pg-lQW">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Tv-3P-BUQ">
+                                                        <rect key="frame" x="8" y="8" width="93" height="80"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="Ke9-pg-lQW" firstAttribute="leading" secondItem="wvQ-GA-2I9" secondAttribute="leading" id="DGn-dh-90J"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ke9-pg-lQW" secondAttribute="bottom" constant="2120" id="WpG-N5-wjb"/>
+                                            <constraint firstItem="Ke9-pg-lQW" firstAttribute="top" secondItem="wvQ-GA-2I9" secondAttribute="top" id="ZKA-G6-NwR"/>
                                             <constraint firstAttribute="height" constant="2350" id="tpk-cp-T53"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ke9-pg-lQW" secondAttribute="trailing" id="yii-JS-vSF"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -84,6 +100,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vgR-H0-VMz"/>
                     </view>
+                    <connections>
+                        <outlet property="personalPhoto" destination="4Tv-3P-BUQ" id="9VU-6A-g7w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cnr-zS-QTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
