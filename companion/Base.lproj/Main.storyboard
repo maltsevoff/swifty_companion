@@ -205,7 +205,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qFT-2K-asK">
-                                                <rect key="frame" x="0.0" y="606" width="414" height="352"/>
+                                                <rect key="frame" x="0.0" y="619" width="414" height="352"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="352" id="NZN-5C-hru"/>
@@ -245,6 +245,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="qFT-2K-asK" firstAttribute="leading" secondItem="wvQ-GA-2I9" secondAttribute="leading" id="0bf-Z0-oSO"/>
+                                            <constraint firstItem="qFT-2K-asK" firstAttribute="top" secondItem="ckV-Pw-4w3" secondAttribute="bottom" constant="21" id="6Pc-rd-vXm"/>
                                             <constraint firstItem="Ke9-pg-lQW" firstAttribute="leading" secondItem="wvQ-GA-2I9" secondAttribute="leading" id="DGn-dh-90J"/>
                                             <constraint firstAttribute="trailing" secondItem="qFT-2K-asK" secondAttribute="trailing" id="PBm-8v-mtg"/>
                                             <constraint firstAttribute="trailing" secondItem="ckV-Pw-4w3" secondAttribute="trailing" id="RhY-8G-lb5"/>
@@ -252,7 +253,6 @@
                                             <constraint firstItem="Ke9-pg-lQW" firstAttribute="top" secondItem="wvQ-GA-2I9" secondAttribute="top" id="ZKA-G6-NwR"/>
                                             <constraint firstItem="ckV-Pw-4w3" firstAttribute="top" secondItem="Ke9-pg-lQW" secondAttribute="bottom" constant="10" id="djQ-r8-DGs"/>
                                             <constraint firstItem="ckV-Pw-4w3" firstAttribute="leading" secondItem="wvQ-GA-2I9" secondAttribute="leading" id="iPb-V4-7Lm"/>
-                                            <constraint firstItem="qFT-2K-asK" firstAttribute="top" secondItem="ckV-Pw-4w3" secondAttribute="bottom" constant="8" id="swN-zG-PWJ"/>
                                             <constraint firstAttribute="height" constant="2350" id="tpk-cp-T53"/>
                                             <constraint firstAttribute="trailing" secondItem="Ke9-pg-lQW" secondAttribute="trailing" id="yii-JS-vSF"/>
                                         </constraints>
