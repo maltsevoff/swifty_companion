@@ -12,14 +12,14 @@ import SwiftyJSON
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("==============================", userSkills)
         if tableView == skillsTableView {
             let cell = skillsTableView.dequeueReusableCell(withIdentifier: "Skill") as? SkillCell
             cell?.nameLabel.text = userSkills[indexPath.row].name
             return cell!
         } else {
             let cell = projectsTableView.dequeueReusableCell(withIdentifier: "Project") as? ProjectCell
-
+			cell?.titleLabel.text = userProjects[indexPath.row].name
+			cell?.detailLabel.text = String(describing: userProjects[indexPath.row].mark)
             return cell!
         }
     }
@@ -30,32 +30,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var number: Int
         if tableView == skillsTableView {
             number = userSkills.count
-            print("===========================2", number, userSkills)
         } else {
             number = userProjects.count
         }
         return number
     }
-    
-    
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print("==============================", userSkills)
-//        if tableView == skillsTableView {
-//            let cell = skillsTableView.dequeueReusableCell(withIdentifier: "Skill") as? SkillCell
-//            cell?.nameLabel.text = userSkills[indexPath.row].name
-//            return cell!
-//        } else {
-//            let cell = projectsTableView.dequeueReusableCell(withIdentifier: "Project") as? ProjectCell
-//
-//            return cell!
-//        }
-//    }
-    
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		showUserInfo()
         saveSkills()
+		saveProjects()
         skillsTableView.dataSource = self
         skillsTableView.delegate = self
         projectsTableView.dataSource = self
@@ -120,4 +105,18 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             userSkills.append(sk)
         }
     }
+	
+	func saveProjects () {
+		let projects = userData!["projects_users"]
+		for proj in projects {
+			if proj.1["status"].string == "finished" {
+				var pr = Project.init()
+				pr.name = proj.1["project"]["name"].string
+				pr.mark = proj.1["final_mark"].int
+				pr.isValidate = proj.1["validated?"].bool
+				userProjects.append(pr)
+			}
+		}
+		print(projects)
+	}
 }

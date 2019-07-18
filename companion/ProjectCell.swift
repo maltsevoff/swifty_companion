@@ -20,7 +20,9 @@ class ProjectCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var markLabel: UILabel!
-    
+	
+	
+	@IBOutlet weak var titleLabel: UILabel!
+	
+	@IBOutlet weak var detailLabel: UILabel!
 }
