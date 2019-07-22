@@ -11,6 +11,10 @@ import Alamofire
 import SwiftyJSON
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var userSkills: [Skill] = []
+    var userProjects: [Project] = []
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == skillsTableView {
             let cell = skillsTableView.dequeueReusableCell(withIdentifier: "Skill") as? SkillCell

@@ -28,6 +28,3 @@ struct Project {
     var mark: Int?
     var isValidate: Bool?
 }
-
-var userSkills: [Skill] = []
-var userProjects: [Project] = []
