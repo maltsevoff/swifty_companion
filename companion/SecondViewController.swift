@@ -23,7 +23,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             let cell = projectsTableView.dequeueReusableCell(withIdentifier: "Project") as? ProjectCell
 			cell?.titleLabel.text = userProjects[indexPath.row].name
-			cell?.detailLabel.text = String(describing: userProjects[indexPath.row].mark)
+			cell?.detailLabel.text = String(describing: userProjects[indexPath.row].mark!)
             return cell!
         }
     }
