@@ -22,13 +22,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-y3-EIW">
-                                <rect key="frame" x="122" y="203" width="171" height="30"/>
+                                <rect key="frame" x="103.5" y="203" width="207" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-Dt-gC2">
-                                <rect key="frame" x="158" y="282" width="99" height="30"/>
+                                <rect key="frame" x="157.5" y="282" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="yG3-T8-Qfj"/>
+                                </constraints>
                                 <state key="normal" title="Search in Intra">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -39,15 +42,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="CGh-y3-EIW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5ri-Xq-EQ0"/>
                             <constraint firstItem="CGh-y3-EIW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="FCp-SI-C0I"/>
                             <constraint firstItem="Af0-pP-gyu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="J4y-Dq-Hsy"/>
-                            <constraint firstItem="ec4-Dt-gC2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="JQl-Ip-eSZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ec4-Dt-gC2" secondAttribute="trailing" constant="157" id="QGw-3e-Bsi"/>
-                            <constraint firstItem="CGh-y3-EIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="aEX-lL-7fg"/>
+                            <constraint firstItem="ec4-Dt-gC2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PcS-cK-GHi"/>
                             <constraint firstAttribute="trailing" secondItem="Af0-pP-gyu" secondAttribute="trailing" id="bqG-Zi-tv2"/>
                             <constraint firstItem="Af0-pP-gyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cTz-j2-Y13"/>
+                            <constraint firstItem="CGh-y3-EIW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="evQ-pl-QF3"/>
                             <constraint firstAttribute="bottom" secondItem="Af0-pP-gyu" secondAttribute="bottom" id="lXb-KY-gXH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CGh-y3-EIW" secondAttribute="trailing" constant="121" id="pP1-vv-TtL"/>
                             <constraint firstItem="ec4-Dt-gC2" firstAttribute="top" secondItem="CGh-y3-EIW" secondAttribute="bottom" constant="49" id="poD-u8-dga"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
