@@ -18,7 +18,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == skillsTableView {
             let cell = skillsTableView.dequeueReusableCell(withIdentifier: "Skill") as? SkillCell
-            cell?.nameLabel.text = userSkills[indexPath.row].name
+            cell?.nameLabel.text = "\(userSkills[indexPath.row].name ?? "No skill") \(userSkills[indexPath.row].level ?? 0.0)"
             cell?.progressBar.progress = (userSkills[indexPath.row].level ?? 0.0) / 21
             return cell!
         } else {
