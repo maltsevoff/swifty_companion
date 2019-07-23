@@ -25,6 +25,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let cell = projectsTableView.dequeueReusableCell(withIdentifier: "Project") as? ProjectCell
 			cell?.titleLabel.text = userProjects[indexPath.row].name
 			cell?.detailLabel.text = String(describing: userProjects[indexPath.row].mark!)
+            if userProjects[indexPath.row].isValidate! {
+                cell?.detailLabel.textColor = .green
+            } else {
+                cell?.detailLabel.textColor = .red
+            }
             return cell!
         }
     }
