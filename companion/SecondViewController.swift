@@ -19,6 +19,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if tableView == skillsTableView {
             let cell = skillsTableView.dequeueReusableCell(withIdentifier: "Skill") as? SkillCell
             cell?.nameLabel.text = userSkills[indexPath.row].name
+            cell?.progressBar.progress = (userSkills[indexPath.row].level ?? 0.0) / 21
             return cell!
         } else {
             let cell = projectsTableView.dequeueReusableCell(withIdentifier: "Project") as? ProjectCell
@@ -61,6 +62,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var skillsTableView: UITableView!
     @IBOutlet weak var projectsTableView: UITableView!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var userData: JSON?
     
@@ -98,6 +101,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         pointsLabel.text = "Wallet: \(wallet)"
         let email = userData!["email"].string!
         emailLabel.text = email
+        if let level = userData!["cursus_users"][0]["level"].float {
+            levelLabel.text = "level: \(level)"
+            progressBar.progress = level / 21
+        }
     }
 
     func saveSkills () {
@@ -105,7 +112,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         for skill in skills {
             var sk = Skill.init()
             sk.name = skill.1["name"].string
-            sk.level = skill.1["level"].double
+            sk.level = skill.1["level"].float
             userSkills.append(sk)
         }
     }

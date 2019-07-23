@@ -20,7 +20,7 @@ var userLogin: String = ""
 
 struct Skill {
     var name: String?
-    var level: Double?
+    var level: Float?
 }
 
 struct Project {

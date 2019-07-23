@@ -22,8 +22,5 @@ class SkillCell: UITableViewCell {
     }
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var progressBar: UIView!
-    
-    
-    
+    @IBOutlet weak var progressBar: UIProgressView!
 }
