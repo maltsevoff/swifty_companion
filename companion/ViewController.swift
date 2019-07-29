@@ -52,6 +52,10 @@ class ViewController: UIViewController {
 	}
     
     func userInfo () {
+        if bearerToken == "" {
+            alertManger(title: "Error", subtitle: "Bearer token doesn't exist. Reload the application and try later.")
+            return
+        }
         let mydata = MyData.init()
         let reqUrl = mydata.site + "v2/users/\(userLogin)"
         let headers = [
