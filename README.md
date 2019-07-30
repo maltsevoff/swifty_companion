@@ -3,5 +3,5 @@
 This application takes information from Intra usign 42 API.
 
 ```bash
-git clone
+git clone https://github.com/maltsevoff/swifty_companion.git
 ```
