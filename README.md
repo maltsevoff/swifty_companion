@@ -2,8 +2,10 @@
 
 This application takes information from Intra usign 42 API.
 
+How to start:
 ```bash
-git clone https://github.com/maltsevoff/swifty_companion.git
+git clone https://github.com/maltsevoff/swifty_companion.git && cd swifty_companion && open companion.xcworkspace
+Run on your iPhone or Simulator
 ```
 Initial screen. Here you need to enter your Intra login.
 
