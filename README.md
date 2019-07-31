@@ -11,6 +11,10 @@ Run on your iPhone or Simulator.
 <p>Initial screen. Here you need to enter your Intra login.</p>
 
 <div align="center">
+  <img src="https://github.com/maltsevoff/swifty_companion/blob/master/Screenshots/appUsage.gif" width="30%"/>
+</div>
+
+<div align="center">
   <img src="https://github.com/maltsevoff/swifty_companion/blob/master/Screenshots/Screen%20Shot%202019-07-29%20at%204.52.47%20PM.png" width="40%"/>
   <img src="https://github.com/maltsevoff/swifty_companion/blob/master/Screenshots/Screen%20Shot%202019-07-29%20at%204.53.05%20PM.png" width="40%"/>
 </div>
